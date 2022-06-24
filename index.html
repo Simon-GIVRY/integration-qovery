@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Intégration de la maquette de Qovery">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./webFiles/css/style.css">
+        <title>The Simplest Way To Deploy Your Apps on AWS</title>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <div class="logo">
+                    <img src="./src/Logotype.png" alt="Logo de Qovery">
+                </div>
+                <section>
+                    <h1>Qovery Engine</h1>
+                    <img src="./src/" alt="">
+                </section>
+                <div>
+                    <p>Abstraction layer to deploy microservices applications on any Cloud provider.</p>
+                    <p>
+                        Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on AWS,
+                        GCP, Azure and others Cloud providers.
+                    </p>
+                </div>
+                <div>
+                    <img src="./src/seeOnGithub.png" alt="">
+                    <img src="./src/joinOnDiscord.png" alt="">
+                </div>
+            </div>
+            <img src="./src/headerImg.png" alt="">
+
+        </header>
+        <main>
+
+            <div>
+                <section>
+                    <h2>How does it work?</h2>
+                    <p>Qovery Engine is an open-source abstraction layer product that turns easy apps deployment on AWS, GCP,
+                        Azure and others Cloud providers. The Qovery Engine is coded in Rust and takes advantage of Terraform,
+                        Helm, Kubectl, Docker to manage resources.
+                    </p>
+                    <img src="./src/mainImg.png" alt="Description du fonctionnement de Qovery">
+                </section>
+            </div>
+
+            <div>
+                <section>
+                    <h2>Usage</h2>
+                    <p>Initialize EKS (AWS Kubernetes) and ECR (AWS container registry) on AWS</p>
+                    <div>
+                        <button>Rust</button>
+                        <code>
+                                            let engine = Engine::new(
+                                context, // parameters
+                                local_docker, // initialize Docker as a Build Platform
+                                ecr, // initialize Elastic Container Registry
+                                aws, // initialize AWS account
+                                cloudflare, // initialize Cloudflare as DNS Nameservers
+                            );
+                            let session = match engine.session() {
+                                Ok(session) => session, // get the session
+                                Err(config_error) => panic!("configuration error {:?}", config_error),
+                            };
+                            let mut tx = session.transaction();
+                            // create EKS (AWS managed Kubernetes cluster)
+                            tx.create_kubernetes(&eks);
+                            // create the infrastructure and wait for the result
+                            match tx.commit() {
+                                TransactionResult::Ok => println!("OK"),
+                                TransactionResult::Rollback(commit_err) => println!("ERROR but rollback OK"),
+                                TransactionResult::UnrecoverableError(commit_err, rollback_err) => println!("FATAL ERROR")
+                            };
+                        </code>
+                    </div>
+                </section>
+                <div>
+                    <img src="./src/seeOnGithub.png" alt=""> <img src="./src/joinOnDiscord.png" alt="">
+                </div>
+            </div>
+
+            <div>
+                <section>
+                    <img src="./src/group.png" alt="">
+                    <h2>Deploy real world applications</h2>
+                    <p>Qovery Engine empowers you to deploy complex applications, such as a backend, a frontend, and a
+                        database in a very simple way.</p>
+                    <p>Servers, networking, security, all is done by the Engine for you. </p>
+                    <span>See more</span>
+                </section>
+
+                <section>
+                    <img src="./src/resiliencykey.png" alt="">
+                    <h2>Resiliency is key</h2>
+                    <p>
+                        Qovery Engine knows when something goes wrong on the deployment of your applications. Qovery Engine
+                        is built with resiliency in mind.
+                    </p>
+                    <p>
+                        A transactional engine inspired by what is provided into ACID databases has been developed at the
+                        heart of the product to rollback on a consistent and working application version when something goes
+                        wrong.
+                    </p>
+                </section>
+
+                <section>
+                    <img src="./src/On top of tools.png" alt="">
+                    <h2>On top of the best tools</h2>
+                    <p>
+                        Qovery Engine does not reinvent the wheel. It takes advantage of the best tools in the Cloud industry, such as Kubernetes, Terraform, and Helm to manage the deployment of the infrastructure and your applications.
+                    </p>
+                    <p>
+                        Servers, networking, security, all is done by the Engine for you.
+                    </p>
+                    <span>See more</span>
+                </section>
+
+                <section>
+                    <img src="./src/Policies.png" alt="">
+                    <h2>Extensible</h2>
+                    <p>
+                        Qovery Engine is built to be highly extensible. Adding the support of a Cloud provider or a Continuous Integration platform is as simple as implementing a simple programmatic interface.
+                    </p>
+                    <span>See more</span>
+                </section>
+            </div>
+
+
+            <div>
+                <h2>They use Qovery Engine</h2>
+            </div>
+
+        </main>
+
+        <footer>
+            <div>
+                <img src="./src/logo-black.svg" alt="">
+            </div>
+            <div>
+                <p>
+                    Qovery combines the power of Kubernetes, the reliability of AWS, and the simplicity of Heroku to deploy your apps.
+                </p>
+
+            </div>
+            <div>
+                <h2>Ressources</h2>
+                <ul>
+                    <li><a href="">Documentation</a></li>
+                    <li><a href="">Guides</a></li>
+                    <li><a href="">Tutorials</a></li>
+                    <li><a href="">Engineering</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">API</a></li>
+                    <li><a href="">Github</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>
+                    Community
+                </h2>
+                <ul>
+                    <li><a href="">Discord</a></li>
+                    <li><a href="">Forum</a></li>
+                    <li><a href="">Community call</a></li>
+                    <li><a href="">Goodies</a></li>
+                    <li><a href="">Roadmap</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <h2>Qovery vs. Other</h2>
+                <ul>
+                    <li><a href="">Heroku</a></li>
+                    <li><a href="">Netlify</a></li>
+                    <li><a href="">Terraform</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Jobs</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Investors</a></li>
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p>© 2022 DESIGNED BY QOVERY</p>
+                <p>BACKED BY <a href="">TECHSTARS</a></p>
+                <p>PROUD SILVER MEMBER OF <a href="">CNCF</a> AND <a href="">LINUX FOUNDATION</a></p>
+                <p>QOVERY BY BIRDSIGHT - ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+
+
+
+    </body>
+
+</html>
