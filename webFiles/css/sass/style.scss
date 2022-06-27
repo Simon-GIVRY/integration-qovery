@@ -151,16 +151,16 @@ main{
     img.background{
         z-index: -1;
         position: absolute;
-        
-
     }
 
 
 
     div.code{
 
+        
         section{
-            width: 900px;
+            margin-bottom: 3rem;
+            max-width: 900px;
 
             div{
 
@@ -175,8 +175,6 @@ main{
 
             }
         }
-
-
 
 
     }

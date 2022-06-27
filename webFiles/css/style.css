@@ -101,7 +101,8 @@ main img.background {
   position: absolute;
 }
 main div.code section {
-  width: 900px;
+  margin-bottom: 3rem;
+  max-width: 900px;
 }
 main div.code section div {
   background-color: white;
