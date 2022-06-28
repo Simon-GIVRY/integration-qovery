@@ -184,18 +184,75 @@ main{
     div.quad{
         display: flex;
         flex-direction: column;
+        display: flex;
 
 
 
         div{
             display: flex;
 
+            
+
+
+
+
+
+            
+        }
+        
+        
+        section{
+            display: flex;
+            align-items: flex-start;
+            
+            
+            
+
+
+            
+            p{
+                text-align: left;
+                font-family: 'SF UI Text';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+    
+            }
+            
+            img{
+
+
+                
+                &:first-of-type{
+                    width: 160px;
+                    height: 140px;
+                    
+                }
+                
+                
+                &:nth-of-type(2){
+                    width: 305px;
+                    height: 170px;
+                }
+                
+                &:nth-of-type(3){
+                width: 260px;
+                height: 240px;
+                }
+                
+                
+                &:nth-of-type(4){
+                    width: 420px;
+                    height: 230px;
+                    
+                }
+            }          
+
+
+
         }
 
-        div:first-of-type{
-
-        }
     }
-
 
 }
